@@ -52,7 +52,7 @@ function create() {
     //  Game input
     cursors = game.input.keyboard.createCursorKeys();
 
-    game.input.keyboard.onDownCallback = function(e){            
+    game.input.keyboard.onUpCallback = function(e){            
         if(e.keyCode == Phaser.Keyboard.SPACEBAR){
          fireBullet();        
          }            
