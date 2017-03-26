@@ -47,6 +47,7 @@ function create() {
 
     sprite.body.drag.set(100);
     sprite.body.maxVelocity.set(200);
+    sprite.body.collideWorldBounds = true;
 
     //  Game input
     cursors = game.input.keyboard.createCursorKeys();
@@ -83,7 +84,7 @@ function update() {
         fireBullet();
     }
 
-    screenWrap(sprite);
+
 
 }
 
@@ -104,27 +105,6 @@ function fireBullet () {
     }
 }
 
-function screenWrap (sprite) {
-
-    if (sprite.x < 0)
-    {
-        sprite.x = game.width;
-    }
-    else if (sprite.x > game.width)
-    {
-        sprite.x = 0;
-    }
-
-    if (sprite.y < 0)
-    {
-        sprite.y = game.height;
-    }
-    else if (sprite.y > game.height)
-    {
-        sprite.y = 0;
-    }
-
-}
 
 function render() {
 }
