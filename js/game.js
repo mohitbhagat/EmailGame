@@ -100,7 +100,7 @@ function fireBullet () {
             bullet.lifespan = 2000;
             bullet.rotation = sprite.rotation;
             game.physics.arcade.velocityFromRotation(sprite.rotation, 400, bullet.body.velocity);
-            bulletTime = game.time.now + 50;
+            bulletTime = game.time.now + 250;
         }
     }
 }
