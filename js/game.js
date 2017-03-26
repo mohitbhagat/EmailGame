@@ -51,7 +51,12 @@ function create() {
 
     //  Game input
     cursors = game.input.keyboard.createCursorKeys();
-    game.input.keyboard.addKeyCapture([ Phaser.Keyboard.SPACEBAR ]);
+
+    game.input.keyboard.onDownCallback = function(e){            
+        if(e.keyCode == Phaser.Keyboard.SPACEBAR){
+         fireBullet();        
+         }            
+     };
 
 }
 
@@ -78,12 +83,6 @@ function update() {
     {
         sprite.body.angularVelocity = 0;
     }
-
-    if (game.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR))
-    {
-        fireBullet();
-    }
-
 
 
 }
